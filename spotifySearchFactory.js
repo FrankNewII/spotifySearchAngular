@@ -1,5 +1,9 @@
 (function () {
-  angular.module('spotify').factory('Spotify', ['$http', function ($http) {
+    angular.module('spotify').factory('Spotify', Spotify);
+
+    Spotify.$inject = ['$http'];
+
+    function Spotify($http) {
 
     var url = 'https://api.spotify.com/v1/search';
 
@@ -47,6 +51,5 @@
 
     return spotifyServiceInterface;
   }
-  ]);
 })();
 
